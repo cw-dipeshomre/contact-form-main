@@ -89,8 +89,9 @@
             name="first-name"
             id="fi"
             placeholder="First Name"
-            required
+            
           />
+          <small class="error"></small>
         </div>
         <div class="inside">
           <label for="la">Last Name</label>
@@ -99,8 +100,9 @@
             name="last-name"
             id="la"
             placeholder="Last Name"
-            required
+            
           />
+          <small class="error"></small>
         </div>
       </div>
       <div class="sec1">
@@ -111,25 +113,27 @@
             name="email"
             id="em"
             placeholder="Email Address"
-            required
+            
           />
+          <small class="error"></small>
         </div>
       </div>
       <div class="Querytype">
         <label for="qe"> Query Type </label>
         <div class="options1">
           <label>
-            <input type="radio" name="Query" id="qe" required />
+            <input type="radio" name="Query" id="qe"  />
 
             General Enquiry
           </label>
 
           <label>
-            <input type="radio" name="Query" id="qe" required />
+            <input type="radio" name="Query" id="qe"  />
 
             Support Request
           </label>
         </div>
+        <small class="error"></small>
       </div>
       <div class="inside">
         <label for="message">Message</label>
@@ -139,12 +143,14 @@
           cols="30"
           rows="10"
           placeholder="Your Message"
-          required
+          
         ></textarea>
+        <small class="error"></small>
       </div>
       <div class="sec1">
-        <input type="checkbox" name="consent" id="consent" required />
+        <input type="checkbox" name="consent" id="consent"  />
         I consent to being contacted by the team
+        <small class="error"></small>
       </div>
 
       <div class="attribution">
@@ -154,5 +160,6 @@
       </div>
       <button type="submit">Submit</button>
     </form>
+    <script src="script.js"></script>
   </body>
 </html>
