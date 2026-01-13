@@ -12,6 +12,14 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .sec1{
+      display: flex;
+      gap: 20px;
+    }
+    .inside{
+      display: flex;
+      flex-direction: column;
+    }
   </style>
 </head>
 <body>
@@ -21,15 +29,23 @@
   Contact Us
 </h1>
 <div class="sec1">
-<input type="text" name="first-name" placeholder="First Name" required>
-  First Name
-  This field is required
+  <div class="inside">
 
-  Last Name
-  This field is required
+    <label for="fi">First Name</label>
+  <input type="text" name="first-name" id="fi" placeholder="First Name" required>
+  </div>
+  <div class="inside">
+
+    <label for="la">Last Name</label>
+  <input type="text" name="last-name" id="la" placeholder="Last Name" required>
+  </div>
+
 </div>
 
-  Email Address
+
+
+  <label for="em">Email Address</label>
+  <input type="email" name="email" id="em" placeholder="Email Address" required>
   Please enter a valid email address
   This field is required
 
@@ -53,7 +69,11 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Dipesh Omre</a>.
   </div>
-  
+  <script>
+    const inp1=document.querySelectorAll('input');
+
+  </script>
+
 </form>
 
 </body>
