@@ -15,7 +15,7 @@ form.addEventListener("submit", function (e) {
 
     if (field.value.trim() === "") {
       if (field.type === "email") {
-        error.textContent = "Please enter a valid email address";
+        error.textContent = "Enter a valid email address";
       } else {
         error.textContent = "This field is required";
       }
@@ -29,7 +29,7 @@ form.addEventListener("submit", function (e) {
   const radios = form.querySelectorAll("input[name='Query']");
   const radioError = document.querySelector(".Querytype .error");
 
-  const radioChecked = Array.from(radios).some((radio) => radio.checked);
+  const radioChecked = [...radios].some((radio) => radio.checked);
 
   if (!radioChecked) {
     radioError.textContent = "Please select a query type";
@@ -40,7 +40,7 @@ form.addEventListener("submit", function (e) {
 
   // ===== Checkbox =====
   const consent = document.getElementById("consent");
-  const consentError = consent.closest(".inside").querySelector(".error");
+  const consentError = consent.parentElement.querySelector(".error");
 
   if (!consent.checked) {
     consentError.textContent = "Consent is required";
@@ -49,8 +49,8 @@ form.addEventListener("submit", function (e) {
     consentError.textContent = "";
   }
 
-  // ===== Submit if valid =====
+  // ===== SUCCESS =====
   if (isValid) {
-    form.submit();
+    form.reset(); // ✅ NOW WORKS
   }
 });

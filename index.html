@@ -48,7 +48,7 @@
       .contact {
         border-radius: 10px;
         padding: 20px;
-        margin: 290px;
+        margin: 360px;
         width: 90%;
         background-color: white;
       }
@@ -64,6 +64,7 @@
         border: none;
         border-radius: 4px;
         padding: 3px;
+        cursor: pointer;
       }
       .options1 {
         gap: 20px;
@@ -148,9 +149,14 @@
         <small class="error"></small>
       </div>
       <div class="sec1">
-        <input type="checkbox" name="consent" id="consent"  />
-        I consent to being contacted by the team
-        <small class="error"></small>
+        <label for="consent">
+
+          <input type="checkbox" name="consent" id="consent"  />
+          I consent to being contacted by the team
+          <div>
+            <small class="error"></small>
+          </div>
+        </label>
       </div>
 
       <div class="attribution">
