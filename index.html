@@ -1,80 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    .sec1{
-      display: flex;
-      gap: 20px;
-    }
-    .inside{
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
-</head>
-<body>
-<form action="post">
-<h1>
+    <title>Frontend Mentor | Contact form</title>
 
-  Contact Us
-</h1>
-<div class="sec1">
-  <div class="inside">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .sec1 {
+        display: flex;
+        gap: 20px;
+      }
+      .inside {
+        display: flex;
+        flex-direction: column;
+      }
+      .options1 {
+        display: flex;
+      }
+      .contact{
+        border: 2px solid black;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+            }
+            
+    </style>
+  </head>
+  <body>
+    <form action="post" class="contact">
+      <h1>Contact Us</h1>
+      <div class="sec1">
+        <div class="inside">
+          <label for="fi">First Name</label>
+          <input
+            type="text"
+            name="first-name"
+            id="fi"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div class="inside">
+          <label for="la">Last Name</label>
+          <input
+            type="text"
+            name="last-name"
+            id="la"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+      </div>
+      <div class="sec1">
+        <div class="inside">
+          <label for="em">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="em"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+      </div>
+      <div class="Querytype">
+        <label for="qe"> Query Type </label>
+        <div class="options1">
+          <label>
+            <input type="radio" name="Query" id="qe" required />
 
-    <label for="fi">First Name</label>
-  <input type="text" name="first-name" id="fi" placeholder="First Name" required>
-  </div>
-  <div class="inside">
+            General Enquiry
+          </label>
 
-    <label for="la">Last Name</label>
-  <input type="text" name="last-name" id="la" placeholder="Last Name" required>
-  </div>
+          <label>
+            <input type="radio" name="Query" id="qe" required />
 
-</div>
+            Support Request
+          </label>
+        </div>
+      </div>
+      <div class="inside">
 
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+          required
+        ></textarea>
+      </div>
+      <input type="checkbox" name="consent" id="consent" required>
+      I consent to
+      being contacted by the team 
 
-
-  <label for="em">Email Address</label>
-  <input type="email" name="email" id="em" placeholder="Email Address" required>
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Dipesh Omre</a>.
-  </div>
-  <script>
-    const inp1=document.querySelectorAll('input');
-
-  </script>
-
-</form>
-
-</body>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Dipesh Omre</a>.
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
