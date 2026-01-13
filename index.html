@@ -16,12 +16,13 @@
     <style>
       body {
         font-family: sans-serif;
-        background-color: rgb(183, 244, 183);
+        background-color:#e0f1e7;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        font-size: 15px;
+        font-size: 11px;
+        color: gray;
       }
       .attribution {
         font-size: 11px;
@@ -48,14 +49,15 @@
       .contact {
         border-radius: 10px;
         padding: 20px;
-        margin-left: 360px;
-        margin-right: 360px;
+        margin:100px 360px;
+
         width: 70vw;
         background-color: white;
       }
 
       h1 {
         margin-bottom: 30px;
+        color: rgb(56, 56, 56);
       }
       button {
         background-color: rgb(16, 120, 99);
@@ -127,10 +129,15 @@
         color: #686464;
         flex: 1;
       }
+      .in-o1{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
     </style>
   </head>
   <body>
-    <form action="post" class="contact">
+    <form onsubmit="return " class="contact">
       <div class="success-message" id="successMessage">
         ✅ Your message has been sent successfully!
       </div>
@@ -138,24 +145,24 @@
       <h1>Contact Us</h1>
       <div class="sec1">
         <div class="inside">
-          <label for="fi">First Name</label>
+          <label for="fi">First Name *</label>
           <input
             type="text"
             name="first-name"
             id="fi"
-            placeholder="First Name"
+          
           />
           <small class="error"></small>
         </div>
         <div class="inside">
-          <label for="la">Last Name</label>
-          <input type="text" name="last-name" id="la" placeholder="Last Name" />
+          <label for="la">Last Name *</label>
+          <input type="text" name="last-name" id="la"  />
           <small class="error"></small>
         </div>
       </div>
       <div class="sec1">
         <div class="inside">
-          <label for="em">Email Address</label>
+          <label for="em">Email Address *</label>
           <input
             type="email"
             name="email"
@@ -166,24 +173,30 @@
         </div>
       </div>
       <div class="Querytype">
-        <label for="qe"> Query Type </label>
+        <label for="qe"> Query Type *</label>
         <div class="options1">
           <label class="o1">
-            <input type="radio" name="Query" id="qe" />
-
-            General Enquiry
+            <div class="in-o1">
+              <input type="radio" name="Query" id="qe" />
+              <span>
+                General Enquiry
+              </span>
+            </div>
           </label>
 
           <label class="o1">
-            <input type="radio" name="Query" id="qe" />
-
-            Support Request
+            <div class="in-o1">
+              <input type="radio" name="Query" id="qe" />
+              <span>
+                Support Request
+              </span>
+            </div>
           </label>
         </div>
         <small class="error"></small>
       </div>
       <div class="inside">
-        <label for="message">Message</label>
+        <label for="message">Message *</label>
         <textarea
           name="message"
           id="message"
@@ -211,5 +224,6 @@
       <button type="submit">Submit</button>
     </form>
     <script src="script.js"></script>
+    <!-- <script src="script1.js"></script> -->
   </body>
 </html>
