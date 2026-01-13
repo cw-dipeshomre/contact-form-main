@@ -24,7 +24,6 @@ form.addEventListener("submit", function (e) {
     }
   });
 
-  // ===== Radio buttons =====
   const radios = form.querySelectorAll("input[name='Query']");
   const radioError = document.querySelector(".Querytype .error");
 
@@ -37,7 +36,6 @@ form.addEventListener("submit", function (e) {
     radioError.textContent = "";
   }
 
-  // ===== Checkbox =====
   const consent = document.getElementById("consent");
   const consentError = consent.parentElement.querySelector(".error");
 
@@ -48,8 +46,15 @@ form.addEventListener("submit", function (e) {
     consentError.textContent = "";
   }
 
-  // ===== SUCCESS =====
+  const successMessage = document.getElementById("successMessage");
+
   if (isValid) {
-    form.reset(); // ✅ NOW WORKS
+    successMessage.style.display = "block"; 
+    form.reset(); 
+
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 3000);
   }
+
 });

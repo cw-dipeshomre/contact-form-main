@@ -13,7 +13,6 @@
 
     <title>Frontend Mentor | Contact form</title>
 
-    
     <style>
       body {
         font-family: sans-serif;
@@ -45,7 +44,6 @@
       }
       .options1 {
         display: flex;
-        
       }
       .contact {
         border-radius: 10px;
@@ -89,13 +87,23 @@
         border: 2px solid rgb(16, 120, 99);
         outline: none;
       }
-      input:hover{
+      input:hover {
         cursor: pointer;
       }
       input {
         padding: 8px;
         border: 1px solid gray;
         border-radius: 4px;
+      }
+      .success-message {
+        display: none;
+        background-color: #e6f7f3;
+        color: rgb(16, 120, 99);
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        text-align: center;
       }
       @media (max-width: 526px) {
         .sec1 {
@@ -112,7 +120,7 @@
           margin: 20px;
         }
       }
-      .o1{
+      .o1 {
         border: 1px solid rgb(158, 155, 155);
         border-radius: 6px;
         padding: 5px;
@@ -123,6 +131,10 @@
   </head>
   <body>
     <form action="post" class="contact">
+      <div class="success-message" id="successMessage">
+        ✅ Your message has been sent successfully!
+      </div>
+
       <h1>Contact Us</h1>
       <div class="sec1">
         <div class="inside">
