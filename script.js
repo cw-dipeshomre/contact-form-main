@@ -5,7 +5,6 @@ form.addEventListener("submit", function (e) {
 
   let isValid = true;
 
-  // ===== Text, Email & Textarea =====
   const fields = form.querySelectorAll(
     "input[type='text'], input[type='email'], textarea"
   );

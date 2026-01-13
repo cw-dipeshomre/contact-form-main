@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -14,14 +13,16 @@
 
     <title>Frontend Mentor | Contact form</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    
     <style>
       body {
+        font-family: sans-serif;
         background-color: rgb(183, 244, 183);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+        font-size: 15px;
       }
       .attribution {
         font-size: 11px;
@@ -44,26 +45,28 @@
       }
       .options1 {
         display: flex;
+        
       }
       .contact {
         border-radius: 10px;
         padding: 20px;
-        margin: 360px;
-        width: 90%;
+        margin-left: 360px;
+        margin-right: 360px;
+        width: 70vw;
         background-color: white;
       }
 
       h1 {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
       }
       button {
         background-color: rgb(16, 120, 99);
         color: white;
         width: 100%;
-        margin: auto;
+        margin: 20px 0px;
+        padding: 10px;
         border: none;
         border-radius: 4px;
-        padding: 3px;
         cursor: pointer;
       }
       .options1 {
@@ -76,6 +79,44 @@
         color: red;
         font-size: 12px;
         margin-top: 4px;
+      }
+      input[type="checkbox"],
+      input[type="radio"] {
+        accent-color: rgb(16, 120, 99);
+      }
+
+      input:focus {
+        border: 2px solid rgb(16, 120, 99);
+        outline: none;
+      }
+      input:hover{
+        cursor: pointer;
+      }
+      input {
+        padding: 8px;
+        border: 1px solid gray;
+        border-radius: 4px;
+      }
+      @media (max-width: 526px) {
+        .sec1 {
+          flex-direction: column;
+        }
+
+        .options1 {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .contact {
+          width: 90vw;
+          margin: 20px;
+        }
+      }
+      .o1{
+        border: 1px solid rgb(158, 155, 155);
+        border-radius: 6px;
+        padding: 5px;
+        color: #686464;
       }
     </style>
   </head>
@@ -90,19 +131,12 @@
             name="first-name"
             id="fi"
             placeholder="First Name"
-            
           />
           <small class="error"></small>
         </div>
         <div class="inside">
           <label for="la">Last Name</label>
-          <input
-            type="text"
-            name="last-name"
-            id="la"
-            placeholder="Last Name"
-            
-          />
+          <input type="text" name="last-name" id="la" placeholder="Last Name" />
           <small class="error"></small>
         </div>
       </div>
@@ -114,7 +148,6 @@
             name="email"
             id="em"
             placeholder="Email Address"
-            
           />
           <small class="error"></small>
         </div>
@@ -122,14 +155,14 @@
       <div class="Querytype">
         <label for="qe"> Query Type </label>
         <div class="options1">
-          <label>
-            <input type="radio" name="Query" id="qe"  />
+          <label class="o1">
+            <input type="radio" name="Query" id="qe" />
 
             General Enquiry
           </label>
 
-          <label>
-            <input type="radio" name="Query" id="qe"  />
+          <label class="o1">
+            <input type="radio" name="Query" id="qe" />
 
             Support Request
           </label>
@@ -144,14 +177,12 @@
           cols="30"
           rows="10"
           placeholder="Your Message"
-          
         ></textarea>
         <small class="error"></small>
       </div>
       <div class="sec1">
         <label for="consent">
-
-          <input type="checkbox" name="consent" id="consent"  />
+          <input type="checkbox" name="consent" id="consent" />
           I consent to being contacted by the team
           <div>
             <small class="error"></small>
